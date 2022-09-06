@@ -10,7 +10,7 @@ header,encoded=data_uri.split(",",1)
 data=b64decode(encoded)
 with open("image.png","wb") as f:
     f.write(data)
-got_image=face_recognition.load_image_file("image.png")
+got_image=face_recognition.load_image_file("image.jpg")
 existing_image=face_recognition.load_image_file("students/"+email+".jpg")
 got_image_facialfeatures=face_recognition.face_encodings(got_image)[0]
 existing_image_facialfeatures=face_recognition.face_encodings(existing_image)[0]
